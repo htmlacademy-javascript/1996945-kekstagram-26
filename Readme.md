@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Renat Khabirov](https://up.htmlacademy.ru/javascript/26/user/1996945).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Якушкин](https://htmlacademy.ru/profile/id126208).
 
 ---
 
