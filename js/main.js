@@ -1,21 +1,21 @@
 import _ from 'lodash';
 
-export const commentText = `Всё отлично!
+const commentText = `Всё отлично!
   В целом всё неплохо. Но не всё.
   Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.
   Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.
   Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.
   Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!`;
 
-export const names = ['Эомер', 'Фродо', 'Арагорн', 'Арвэн', 'Эовин'];
+const names = ['Эомер', 'Фродо', 'Арагорн', 'Арвэн', 'Эовин'];
 
-export const messages = commentText.split(new RegExp('[!\.?]+', 'g'))
+const messages = commentText.split(new RegExp('[!\.?]+', 'g'))
   .map((e) => e.trim())
   .filter((e) => !_.isEmpty(e));
 
 let commentCounter = 0;
 
-export const generateComment = () => {
+const generateComment = () => {
   const comments = _.sampleSize(messages, 2);
   return {
     id: ++commentCounter,
@@ -25,7 +25,7 @@ export const generateComment = () => {
   };
 };
 
-export const generateUser = (id) => {
+const generateUser = (id) => {
   const commentsList = Array.from({length: _.random(5)}, generateComment);
   return {
     id: id,
