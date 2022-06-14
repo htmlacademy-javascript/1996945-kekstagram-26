@@ -9,6 +9,7 @@ const commentText = `Всё отлично!
 
 const names = ['Эомер', 'Фродо', 'Арагорн', 'Арвэн', 'Эовин'];
 
+//eslint-disable-next-line
 const messages = commentText.split(new RegExp('[!\.?]+', 'g'))
   .map((e) => e.trim())
   .filter((e) => !_.isEmpty(e));
